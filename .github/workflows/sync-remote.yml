@@ -4,9 +4,9 @@ name: CI
 
 on:
   schedule:
-    - cron:  '1  * * * *'
+    - cron:  '1  * * * *'  
     # scheduled at 1 MIN every day 
-
+  workflow_dispatch:
 jobs:
   sync_with_upstream:
     runs-on: ubutnu-latest
