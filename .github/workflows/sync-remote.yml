@@ -10,7 +10,7 @@ on:
 
 jobs:
   sync_with_upstream:
-    runs-on: upstream-latest
+    runs-on: ubutnu-latest
     name: Sync master with upstream latest
 
     steps:
