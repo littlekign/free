@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  schedule:
+    - cron:  '1  * * * *'
+    # scheduled at 1 MIN every day 
+  workflow_dispatch:
+
+jobs:
+  sync_with_upstream:
+    runs-on: upstream-latest
+    name: Sync master with upstream latest
+
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v2
+      with:
+        ref: master
+        
+    - name: Pull upstream changes
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v2.2
+      with:
+        upstream_repository: freefq/free
+        upstream_branch: master
+        target_branch: master
+
+    - name: Timestamp
+      run: date
