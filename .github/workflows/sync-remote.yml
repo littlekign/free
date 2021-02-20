@@ -6,7 +6,6 @@ on:
   schedule:
     - cron:  '1  * * * *'
     # scheduled at 1 MIN every day 
-  workflow_dispatch:
 
 jobs:
   sync_with_upstream:
