@@ -4,7 +4,7 @@ name: CI
 
 on:
   schedule:
-    - cron:  '1  * * * *'  
+    - cron:  '1 1 * * *'  
     # scheduled at 1 MIN every day 
   workflow_dispatch:
 jobs:
