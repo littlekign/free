@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   sync_with_upstream:
-    runs-on: ubutnu-latest
+    runs-on: ubuntu-latest
     name: Sync master with upstream latest
 
     steps:
