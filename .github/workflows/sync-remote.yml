@@ -16,6 +16,7 @@ jobs:
       id: sync
       uses: tgymnich/fork-sync@v1.3
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         upstream_repository: freefq/free
         upstream_branch: master
         target_branch: master
