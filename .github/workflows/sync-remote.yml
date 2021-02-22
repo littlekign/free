@@ -17,9 +17,10 @@ jobs:
       uses: tgymnich/fork-sync@v1.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_repository: freefq/free
-        upstream_branch: master
-        target_branch: master
+        owner: freefq
+        base: master
+        head: master
+       
 
     - name: Timestamp
       run: date
