@@ -4,23 +4,17 @@ name: CI
 
 on:
   schedule:
-    - cron:  '1 1 * * *'  
+    - cron:  '60 * * * *'  
     # scheduled at 1 MIN every day 
   workflow_dispatch:
 jobs:
   sync_with_upstream:
     runs-on: ubuntu-latest
-    name: Sync master with upstream latest
-
+    
     steps:
-    - name: Checkout master
-      uses: actions/checkout@v2
-      with:
-        ref: master
-        
     - name: Pull upstream changes
       id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v2.2
+      uses: tgymnich/fork-sync@v1.3
       with:
         upstream_repository: freefq/free
         upstream_branch: master
